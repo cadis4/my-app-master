@@ -1,0 +1,88 @@
+form {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 20px;
+  }
+  
+  .container {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: larger;
+  }
+
+  .container-answer {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+   
+  }
+
+  .container-answer:hover {
+    transform: translateY(-5px);
+    background-color: #fff6f6;
+  }
+  
+  p {
+    display: inline;
+    margin: 0;
+  }
+  
+  input[type="radio"] {
+    margin-right: 5px;
+  }
+  
+  button {
+    display: block;
+    margin: 20px 0;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  div[ngIf="IsSubmited"] {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #4CAF50;
+    background-color: #E6FFE6;
+    color: #006600;
+    border-radius: 5px;
+  }
+
+  .result {
+    background-color: #f2f2f2;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }  
+
+  .container-answer-result{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+    background-color: #E6FFE6;
+  }
+
+  .quiz-title {
+    font-size: 33px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  

@@ -1,0 +1,43 @@
+<form class="container" #quizForm>
+  <div class="quiz-title">{{quizName}}</div>
+    <ul>
+        <li *ngFor="let question of questions; let i = index">
+            <div class="container">
+            <p>{{i + 1}}.{{question.name}}</p>
+              <div class="container-answer" (click)="radioButton1.click()">
+                <input  #radioButton1  type="radio" [name]="'question' + i" value="a" (click)="verifAnswer(question.answerOne, question)"><p>A. {{question.answerOne}}</p>
+              </div>
+              <div class="container-answer" (click)="radioButton2.click()">
+              <input #radioButton2 type="radio" [name]="'question' + i" value="b" (click)="verifAnswer(question.answerTwo, question)"><p>B. {{question.answerTwo}}</p>
+              </div>
+              <div class="container-answer" (click)="radioButton3.click()">
+              <input #radioButton3 type="radio" [name]="'question' + i" value="c" (click)="verifAnswer(question.answerThree, question)"><p>C. {{question.answerThree}}</p>
+              </div>
+              <div class="container-answer" (click)="radioButton4.click()">
+              <input #radioButton4 type="radio" [name]="'question' + i" value="d" (click)="verifAnswer(question.answerFour, question)"><p>D. {{question.answerFour}}</p>
+              </div>
+            </div>
+        </li>
+    </ul>
+        <button (click)=openDialog()>Submit</button>
+        <button (click)=resetquiz()>Reset Quiz</button>
+        <div>current grade:{{currentGrade}}</div>
+        <div>current max grade:{{currentMaxGrade}}</div>
+        <div>current passed status:{{currentPassed}}</div>
+        <div *ngIf="isSubmited">
+          <div class="result">Felicitari, ai luat nota: {{verifiedQuestionsCount}}/{{questions.length}}</div>
+          <button (click)="showContainer = true">Apasa aici pentru a vedea raspunsurile corecte</button>
+          <div *ngIf="showContainer">
+           <ul>
+            <li *ngFor="let question of questions; let i = index">
+              <div class="container">
+              <p>{{i + 1}}.{{question.name}}</p>
+                <div class="container-answer-result">
+                  <p>{{question.correctAnswer}}</p>
+                </div>
+              </div>
+            </li>
+           </ul>
+          </div>
+        </div>
+</form>

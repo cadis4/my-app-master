@@ -1,0 +1,10 @@
+<ul>
+    <li><a [routerLink]="['home']" routerLinkActive="active">Home</a></li>
+    <li><a [routerLink]="['resources']" routerLinkActive="active">Resources</a></li>
+    <li *ngIf="loggedRole"><a [routerLink]="['users']" routerLinkActive="active">Users</a></li><li *ngIf="loggedRole"><a [routerLink]="['questions']" routerLinkActive="active">Questions</a></li>
+    <li><a href="" routerLinkActive="active">Contact</a></li>
+</ul>
+<button *ngIf="!loggedInStatus"  id="register-button" [routerLink]="['register']" routerLinkActive="active">Register</button>
+<button *ngIf="!loggedInStatus"  id="login-button" [routerLink]="['login']" routerLinkActive="active">Login</button>
+<button *ngIf="loggedInStatus" id="logout-button" (click)="logout()">Logout</button>      
+<router-outlet></router-outlet>

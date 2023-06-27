@@ -1,0 +1,122 @@
+.card-container {
+    background-color: white;
+    color: black;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .field-name {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  .required-star {
+    color: red;
+  }
+  
+  .input-text-field {
+    width: 100%;
+  }
+  
+  .buttons-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+  }
+  
+  .save-btn {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .save-btn:hover {
+    background-color: darkgreen;
+  }
+  
+  .cancel-btn {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  
+  .cancel-btn:hover {
+    background-color: darkgrey;
+  }
+
+  /* Styling for the mat-select component */
+.mat-select {
+    width: 100%;
+  }
+  
+  /* Styling for the mat-option within mat-select */
+  .mat-option {
+    padding: 8px 16px;
+  }
+  
+  /* Styling for the selected mat-option within mat-select */
+  .mat-select-trigger {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px 16px;
+    width: 100%;
+  }
+  
+  /* Styling for the mat-form-field container */
+  .mat-form-field {
+    width: 100%;
+  }
+  
+  /* Styling for the input text fields */
+  .input-text-field {
+    width: 100%;
+  }
+  
+  /* Styling for the field names */
+  .field-name {
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+  
+  /* Styling for the required star */
+  .required-star {
+    color: red;
+  }
+  
+  /* Styling for the buttons container */
+  .buttons-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+  }
+  
+  /* Styling for the SAVE button */
+  .save-btn {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  /* Styling for the CANCEL button */
+  .cancel-btn {
+    background-color: #f44336;
+    color: white;
+  }
+  

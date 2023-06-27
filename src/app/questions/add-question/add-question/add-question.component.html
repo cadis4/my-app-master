@@ -1,0 +1,80 @@
+<mat-card class="mat-elevation-z10 card-container matcard">
+    <mat-card-title class="title">
+        <span>{{!isEditMode ? 'Add' : 'Edit'}} question</span>
+    </mat-card-title>
+    <mat-divider></mat-divider>
+    <mat-card-content>
+        <form [formGroup]="addEditQuestionForm">
+            <mat-card-content>
+                <span class="field-name">Question<span class="required-star"> *</span></span>
+                <mat-form-field class="input-text-field">
+                    <input autocomplete="off" matInput placeholder="Question" name="name" formControlName="name"
+                        type="text" [(ngModel)]="question.name">
+                </mat-form-field>
+            </mat-card-content>
+
+            <mat-card-content>
+                <span class="field-name"> Answer One<span class="required-star"> *</span></span>
+                <mat-form-field class="input-text-field">
+                    <input autocomplete="off" matInput placeholder="AnswerOne" name="answerOne" formControlName="answerOne"
+                        type="text" [(ngModel)]="question.answerOne">
+                </mat-form-field>
+            </mat-card-content>
+
+            <mat-card-content>
+                <span class="field-name"> Answer Two<span class="required-star"> *</span></span>
+                <mat-form-field class="input-text-field">
+                    <input autocomplete="off" matInput placeholder="AnswerTwo" name="answerTwo" formControlName="answerTwo" type="text"
+                        [(ngModel)]="question.answerTwo">
+                    
+                </mat-form-field>
+            </mat-card-content>
+
+            <mat-card-content>
+                <span class="field-name"> Answer Three<span class="required-star"> *</span></span>
+                <mat-form-field class="input-text-field">
+                    <input autocomplete="off" matInput placeholder="AnswerThree" name="answerThree" formControlName="answerThree"
+                        type="text" [(ngModel)]="question.answerThree">
+                   
+                </mat-form-field>
+            </mat-card-content>
+
+            <mat-card-content>
+                <label class="field-name">Answer Four</label>
+                <mat-form-field class="input-text-field">
+                    <input autocomplete="off" type="text" matInput placeholder="AnswerFour" name="answerFour"
+                        formControlName="answerFour" class="form-input-field" [(ngModel)]="question.answerFour" />
+                </mat-form-field>
+
+            </mat-card-content>
+
+            <mat-card-content>
+                <label class="field-name">Correct Answer</label>
+                <mat-form-field class="input-text-field">
+                    <input autocomplete="off" type="text" matInput placeholder="CorrectAnswer" name="correctAnswer"
+                        formControlName="correctAnswer" class="form-input-field" [(ngModel)]="question.correctAnswer" />
+                </mat-form-field>
+
+            </mat-card-content>
+        <mat-card-content>
+        <span class="field-name">Quiz<span class="required-star"> *</span></span>
+        <mat-form-field class="input-text-field">
+          <mat-select matInput formControlName="quiz" placeholder="Quiz" [compareWith]="compareObjects"
+            [(ngModel)]="question.quiz">
+            <mat-option *ngFor="let quiz of quizzes" [value]="quiz">
+              {{ quiz.name }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+    </mat-card-content>
+
+
+            <mat-card-actions class="buttons-container">
+                <button (click)="addOrEditQuestion()" mat-raised-button class="save-btn"
+                    [disabled]="!addEditQuestionForm.valid">
+                    SAVE
+                </button>
+                <button routerLink="/questions" mat-raised-button class="cancel-btn">CANCEL</button>
+            </mat-card-actions>
+        </form>
+    </mat-card-content>
+</mat-card>

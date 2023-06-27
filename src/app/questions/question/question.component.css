@@ -1,0 +1,105 @@
+.action{
+width: 34px;
+margin: 4px;
+}
+.question-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: dustyblue;
+  }
+  
+  .card-container {
+    width: 90%;
+    margin-top: 20px;
+    padding-top: 30px;
+    background-color: lightblue;
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 16px;
+    background-color: lightblue;
+    color: black;
+  }
+  
+  .card-content {
+    padding: 16px;
+  }
+  
+  th,
+  td {
+    width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  tr {
+    background-color: dustyblue;
+  }
+  
+  tr:hover {
+    background-color: lightsteelblue;
+  }
+  
+  table {
+    width: 100%;
+    table-layout: fixed;
+  }
+  
+  .question-table {
+    width: 100%;
+    color: black;
+  }
+  
+  .mat-header-cell {
+    font-weight: bold;
+    background-color: green;
+    color: lightblue;
+  }
+  
+  .title {
+    padding: 16px;
+  }
+  
+  .mat-cell {
+    padding: 8px;
+  }
+  
+  .paginator {
+    margin-top: 20px;
+    background-color: lightblue;
+  }
+  
+  .add-button {
+    margin-top: 20px;
+    background-color: lightblue;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .add-button:hover {
+    background-color: darkblue;
+  }
+  
+  .mat-row:nth-child(even) {
+    background-color: dustyblue;
+  }
+  
+  .mat-row:nth-child(odd) {
+    background-color: lightblue;
+  }
+  
+  .mat-row:nth-child(even):hover {
+    background-color: lightsteelblue;
+  }
+  
+  .mat-row:nth-child(odd):hover {
+    background-color: lightsteelblue;
+  }
+  
